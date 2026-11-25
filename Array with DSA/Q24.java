@@ -1,0 +1,35 @@
+import java.util.Scanner;
+class Q24
+{
+	public static void main(String x[])
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter the size of array");
+		int size = sc.nextInt();
+		
+		int a[] = new int[size];
+		
+		System.out.println("enter the array :");
+		for(int i=0 ; i<a.length ; i++)
+		{
+			a[i] = sc.nextInt();
+		}
+		
+		int k = 1;
+		while(k<=4)
+		{
+			for(int i=0 ; i<size-1 ; i++)
+			{
+				int temp = a[i];
+				a[i] = a[i+1];
+				a[i+1] = temp;
+			}
+			k++;
+		}
+		System.out.println("array after rotation");
+		for(int i=0 ; i<a.length ; i++)
+		{
+			System.out.printf("%d ",a[i]);
+		}
+	}
+}
